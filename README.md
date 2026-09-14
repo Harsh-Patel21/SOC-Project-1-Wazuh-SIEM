@@ -2,54 +2,86 @@
 
 ## 📌 Project Overview
 
-This project demonstrates the setup and use of Wazuh as a Security Information and Event Management (SIEM) platform in a controlled home lab environment.
+This project demonstrates a Security Operations Center (SOC) home lab built using Wazuh SIEM.
 
-The lab was built to practice security monitoring, log collection, alert detection, and basic SOC investigation techniques.
+The purpose of the project was to practice centralized security monitoring, Windows log collection, security event detection, and basic alert investigation in a controlled virtual environment.
 
-## 🏗️ Lab Environment
+## 🏗️ Lab Architecture
 
-- Wazuh Manager
-- Windows 10 Virtual Machine
-- Kali Linux Virtual Machine
-- VirtualBox
-- Windows Event Logs
+The lab consists of:
 
-## 🔧 Tools Used
+- Windows 10 — monitored endpoint
+- Wazuh — SIEM and security monitoring platform
+- Kali Linux — security testing environment
+- Oracle VirtualBox — virtualization platform
 
-- Wazuh
+### Detection Flow
+
+Windows Endpoint
+↓
+Wazuh Agent
+↓
+Wazuh Manager
+↓
+Wazuh SIEM
+↓
+Security Alerts & Investigation
+
+## 🔧 Tools & Technologies
+
+- Wazuh SIEM
+- Wazuh Agent
 - Windows 10
 - Kali Linux
-- VirtualBox
+- Oracle VirtualBox
 - Windows Event Viewer
 
-## 🎯 Objectives
+## 🎯 Project Objectives
 
-- Deploy a Wazuh SIEM environment
+- Set up a functional SOC home lab
+- Deploy Wazuh SIEM
 - Connect a Windows endpoint to Wazuh
 - Collect Windows security logs
 - Monitor security events
-- Analyze generated alerts
-- Practice basic SOC investigation
+- Generate and observe security activity
+- Investigate events through the Wazuh dashboard
+- Practice basic SOC Analyst L1 workflows
 
-## 🔍 Detection & Investigation
+## 🔍 Monitoring & Investigation
 
-Security events generated on the Windows endpoint were collected by the Wazuh Agent and forwarded to the Wazuh Manager.
+The Windows endpoint was connected to Wazuh using the Wazuh Agent.
 
-The Wazuh dashboard was then used to review and investigate the detected security events.
+Security logs generated on the Windows machine were collected and forwarded to the Wazuh Manager.
+
+The Wazuh dashboard was used to monitor security events and investigate detected activity.
+
+The investigation process involved reviewing:
+
+- Security event details
+- Event IDs
+- User information
+- Source information
+- Rule descriptions
+- Alert severity
+- Related event activity
 
 ## 📸 Evidence
 
-Screenshots demonstrating the lab setup, Wazuh dashboard, and security events are included in this repository.
+Screenshots from the lab are available in the [`screenshots`](./screenshots) folder.
+
+The screenshots demonstrate the Wazuh dashboard, Windows endpoint monitoring, and security event analysis.
 
 ## 🧠 Skills Practiced
 
 - SIEM Monitoring
-- Log Analysis
-- Security Event Investigation
-- Windows Event Analysis
+- Log Collection
+- Security Event Analysis
+- Windows Event Log Analysis
+- Alert Investigation
 - Basic Threat Detection
 - SOC Analyst L1 Workflow
+- Virtual Lab Administration
 
 ## ⚠️ Disclaimer
 
-This project was performed in a controlled home lab environment for cybersecurity learning and educational purposes.
+This project was conducted in a controlled home lab environment for cybersecurity learning and educational purposes.
